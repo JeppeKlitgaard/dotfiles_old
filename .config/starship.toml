@@ -11,3 +11,11 @@ format = "took [$duration](bold yellow)"
 
 [directory]
 truncate_to_repo = false
+
+[python]
+format = 'via [${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+
+[shell]
+fish_indicator = " "
+powershell_indicator = "_"
+disabled = false
