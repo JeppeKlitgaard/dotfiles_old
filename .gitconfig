@@ -1,0 +1,12 @@
+[user]
+	email = jeppe@dapj.dk
+	name = Jeppe Klitgaard
+[core]
+	editor = code --wait
+[diff]
+    tool = default-difftool
+[difftool "default-difftool"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+[color]
+	# Enable colors in color-supporting terminals
+	ui = auto
