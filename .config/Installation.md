@@ -22,4 +22,5 @@ curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/ajeetdsou
 ```sh
 pipx install xxh-xxh
 xxh +I xxh-plugin-fish-fisher
+xxh +I xxh-plugin-prerun-zoxide
 ```
