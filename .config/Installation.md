@@ -15,3 +15,11 @@ ln -s $(which fdfind) ~/.local/bin/fd
 
 ```sh
 curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/ajeetdsouza/zoxide/master/install.sh | sh
+```
+
+## xxh
+
+```sh
+pipx install xxh-xxh
+xxh +I xxh-plugin-fish-fisher
+```
