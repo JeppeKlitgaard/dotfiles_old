@@ -1,2 +1,2 @@
-fish_add_path $HOME/bin
-fish_add_path $HOME/.local/bin
+set -ax PATH $HOME/bin
+set -ax PATH $HOME/.local/bin

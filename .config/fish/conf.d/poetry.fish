@@ -1,2 +1,2 @@
 # Poetry
-fish_add_path $HOME/.poetry/bin
+set -ax PATH $HOME/.poetry/bin
