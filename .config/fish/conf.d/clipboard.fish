@@ -1,0 +1,1 @@
+alias c "clip.exe"
