@@ -10,3 +10,16 @@
 [color]
 	# Enable colors in color-supporting terminals
 	ui = auto
+[alias]
+	prp = !git pull --rebase && git push
+	unstage = restore --staged
+	us = unstage
+
+# This next lines include Netlify's Git Credential Helper configuration in your Git configuration.
+[include]
+  path = /home/jeppe/.config/netlify/helper/git-config
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
