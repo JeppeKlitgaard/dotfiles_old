@@ -1,0 +1,59 @@
+#!/bin/fish
+
+set BACKUP_TARGET "/mnt/q/"
+set FILTER_TARGET "/home/jeppe/.config/backup_everything/filters.txt"
+set params "--progress"
+set -a params "--filter-from" $FILTER_TARGET
+set -a params "--transfers=10" "--checkers=25" "--tpslimit=10"
+
+echo "This will backup nearly everything..."
+echo "Will back up the following:"
+echo "- WSL: /home/jeppe"
+echo "- Google Drive: jeppe@dapj.dk/My Drive"
+echo "- Google Drive: jeppe.klitgaard@gmail.com/My Drive"
+echo "- Google Drive: jk782@cam.ac.uk/My Drive"
+echo ""
+
+function box_header
+    echo ""
+    echo "============================"
+    echo "$1"
+    echo "============================"
+    echo ""
+end
+
+while true
+    read -P 'Proceed [N/y]? ' yn
+    switch $yn
+        case Y y
+            break
+        case N n
+            exit
+        case "*"
+            echo "Please answer yes or no."
+    end
+end
+
+echo ""
+
+# Test whether the things we need are mounted
+if ! test -d "$BACKUP_TARGET"
+    echo "$BACKUP_TARGET needs to be available. External not plugged in?"
+    echo "Try restarting WSL2 using: "
+    echo "> wsl.exe --shutdown"
+    exit;
+end
+
+echo "Backing up..."
+
+box_header "Backing up WSL: /home/jeppe"
+rclone sync $params /home/jeppe $BACKUP_TARGET"WSL_home_jeppe" || true
+
+box_header "Backing up Google Drive: jeppe@dapj.dk/My Drive..."
+rclone sync $params GD_jeppe_dapj: $BACKUP_TARGET"GD_jeppe_dapj___my_drive" || true
+
+box_header "Backing up Google Drive: jeppe.klitgaard@gmail.com/My Drive..."
+rclone sync $params GD_jeppe_klitgaard: $BACKUP_TARGET"GD_jeppe_klitgard___my_drive" || true
+
+box_header "Backing up Google Drive: jk782@cam.ac.uk/My Drive..."
+rclone sync $params GD_jk782: $BACKUP_TARGET"GD_jk782___my_drive" || true

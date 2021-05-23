@@ -1,0 +1,16 @@
+- .venv/**
+- .cache/**
+- .pyenv/**
+- .tox/**
+- .vscode-server/**
+- Temp/**
+- .local/**
+- .xxh/**
+- .poetry/**
+- .keras/**
+- .texlive2019
+- .zinit/**
+- .git/**
+- node_modules/**
+- __pycache__/**
+- .npm/**
