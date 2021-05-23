@@ -14,6 +14,7 @@
 	prp = !git pull --rebase && git push
 	unstage = restore --staged
 	us = unstage
+	s = status
 
 # This next lines include Netlify's Git Credential Helper configuration in your Git configuration.
 [include]
