@@ -1,0 +1,11 @@
+name: math
+parent: default
+
+matches:
+  - triggers: [":pm ", ":+- "]
+    replace: "±"
+  - triggers: [":mp ", ":-+ "]
+    replace: "∓"
+
+  - triggers: [":cdot ", ":* "]
+    replace: "·"

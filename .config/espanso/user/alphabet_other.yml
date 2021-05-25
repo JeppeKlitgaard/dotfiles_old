@@ -1,0 +1,6 @@
+name: alphabet_other
+parent: default
+
+matches:
+  - trigger: ":hbar "
+    replace: "ℏ"
