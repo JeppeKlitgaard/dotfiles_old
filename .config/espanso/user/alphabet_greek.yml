@@ -2,98 +2,103 @@ name: alphabet_greek
 parent: default
 
 matches:
-  - trigger: ":alpha "
+  # See: https://en.wikipedia.org/wiki/Romanization_of_Greek
+  # "BETA CODE"
+  - triggers: [":alpha ", ":.a "]
     replace: "α"
     propagate_case: true
 
-  - trigger: ":beta "
+  - triggers: [":beta ", ":.b "]
     replace: "β"
     propagate_case: true
 
-  - trigger: ":gamma "
+  - triggers: [":gamma ", ":.g "]
     replace: "γ"
     propagate_case: true
 
-  - trigger: ":delta "
+  - triggers: [":delta ", ":.d "]
     replace: "δ"
     propagate_case: true
 
-  - trigger: ":epsilon "
+  - triggers: [":epsilon ", ":.e "]
     replace: "ϵ"
     propagate_case: true
 
-  - trigger: ":zeta "
+  - triggers: [":zeta ", ":.z "]
     replace: "ζ"
     propagate_case: true
 
-  - trigger: ":eta "
+  - triggers: [":eta ", ":.h "]
     replace: "η"
     propagate_case: true
 
-  - trigger: ":theta "
+  - triggers: [":theta ", ":.q "]
     replace: "θ"
     propagate_case: true
 
-  - trigger: ":iota "
+  - triggers: [":iota ", ":.i "]
     replace: "ι"
     propagate_case: true
 
-  - trigger: ":kappa "
+  - triggers: [":kappa ", ":.k "]
     replace: "κ"
     propagate_case: true
 
-  - trigger: ":lambda "
+  - triggers: [":lambda ", ":.l "]
     replace: "λ"
     propagate_case: true
 
-  - trigger: ":mu "
+  - triggers: [":mu ", ":.m "]
     replace: "μ"
     propagate_case: true
 
-  - trigger: ":nu "
+  - triggers: [":nu ", ":.n "]
     replace: "ν"
     propagate_case: true
 
-  - trigger: ":xi "
+  - triggers: [":xi ", ":.c "]
     replace: "ξ"
     propagate_case: true
 
-  - trigger: ":omicron "
+  - triggers: [":omicron ", ":.o "]
     replace: "o"
     propagate_case: true
 
-  - trigger: ":pi "
+  - triggers: [":pi ", ":.p "]
     replace: "π"
     propagate_case: true
 
-  - trigger: ":rho "
+  - triggers: [":rho ", ":.r "]
     replace: "ρ"
     propagate_case: true
 
-  - trigger: ":sigma "
+  - triggers: [":sigma ", ":.s "]
     replace: "σ"
     propagate_case: true
 
-  - trigger: ":tau "
+  - triggers: [":tau ", ":.t "]
     replace: "τ"
     propagate_case: true
 
-  - trigger: ":upsilon "
+  - triggers: [":upsilon ", ":.u "]
     replace: "υ"
     propagate_case: true
 
-  - trigger: ":phi "
+  - triggers: [":phi ", ":.f "]
+    replace: "φ"
+    propagate_case: true
+  - triggers: [":varphi ", ":.vf "]
     replace: "ϕ"
     propagate_case: true
 
-  - trigger: ":chi "
+  - triggers: [":chi ", ":.x "]
     replace: "χ"
     propagate_case: true
 
-  - trigger: ":psi "
+  - triggers: [":psi ", ":.y "]
     replace: "ψ"
     propagate_case: true
 
-  - trigger: ":omega "
+  - triggers: [":omega ", ":.w "]
     replace: "ω"
     propagate_case: true

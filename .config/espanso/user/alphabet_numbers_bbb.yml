@@ -1,0 +1,33 @@
+name: alphabet_numbers_bbb
+parent: default
+
+matches:
+  - trigger: ":B0 "
+    replace: "𝟘"
+
+  - trigger: ":B1 "
+    replace: "𝟙"
+
+  - trigger: ":B2 "
+    replace: "𝟚"
+
+  - trigger: ":B3 "
+    replace: "𝟛"
+
+  - trigger: ":B4 "
+    replace: "𝟜"
+
+  - trigger: ":B5 "
+    replace: "𝟝"
+
+  - trigger: ":B6 "
+    replace: "𝟞"
+
+  - trigger: ":B7 "
+    replace: "𝟟"
+
+  - trigger: ":B8 "
+    replace: "𝟠"
+
+  - trigger: ":B9 "
+    replace: "𝟡"

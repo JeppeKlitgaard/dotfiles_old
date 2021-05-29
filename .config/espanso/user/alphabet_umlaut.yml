@@ -1,0 +1,95 @@
+name: alphabet_umlaut
+parent: default
+
+matches:
+  - trigger: ":a\" "
+    replace: "ä"
+    propagate_case: true
+
+  - trigger: ":b\" "
+    replace: "b̈"
+    propagate_case: true
+
+  - trigger: ":c\" "
+    replace: "c̈"
+    propagate_case: true
+
+  - trigger: ":e\" "
+    replace: "ë"
+    propagate_case: true
+
+  - trigger: ":h\" "
+    replace: "ḧ"
+    propagate_case: true
+
+  - trigger: ":i\" "
+    replace: "ï"
+    propagate_case: true
+
+  - trigger: ":j\" "
+    replace: "j̈"
+    propagate_case: true
+
+  - trigger: ":k\" "
+    replace: "k̈"
+    propagate_case: true
+
+  - trigger: ":l\" "
+    replace: "l̈"
+    propagate_case: true
+
+  - trigger: ":m\" "
+    replace: "m̈"
+    propagate_case: true
+
+  - trigger: ":n\" "
+    replace: "n̈"
+    propagate_case: true
+
+  - trigger: ":o\" "
+    replace: "ö"
+    propagate_case: true
+
+  - trigger: ":p\" "
+    replace: "p̈"
+    propagate_case: true
+
+  - trigger: ":q\" "
+    replace: "q̈"
+    propagate_case: true
+
+  - trigger: ":r\" "
+    replace: "r̈"
+    propagate_case: true
+
+  - trigger: ":s\" "
+    replace: "s̈"
+    propagate_case: true
+
+  - trigger: ":t\" "
+    replace: "ẗ"
+    propagate_case: true
+
+  - trigger: ":u\" "
+    replace: "ü"
+    propagate_case: true
+
+  - trigger: ":v\" "
+    replace: "v̈"
+    propagate_case: true
+
+  - trigger: ":w\" "
+    replace: "ẅ"
+    propagate_case: true
+
+  - trigger: ":x\" "
+    replace: "ẍ"
+    propagate_case: true
+
+  - trigger: ":y\" "
+    replace: "ÿ"
+    propagate_case: true
+
+  - trigger: ":z\" "
+    replace: "z̈"
+    propagate_case: true

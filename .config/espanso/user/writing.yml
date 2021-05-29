@@ -1,0 +1,22 @@
+name: writing
+parent: default
+
+matches:
+  # Dashes
+  - triggers: [":emdash ", ":em ", ":-- "]
+    replace: "—"
+  - triggers: [":endash ", ":en ", ":- "]
+    replace: "–"
+
+  # Ellipsis
+  - triggers: [":ellipsis ", ":ellip ", ":... ", ":3. "]
+    replace: "…"
+
+  # Partitioners
+  - triggers: [":pilcrow ", ":paragraph ", ":paraph ", ":q "]
+    replace: "¶"
+  - triggers: [":rpilcrow ", ":rparagraph ", ":rparaph ", ":p "]
+    replace: "⁋"
+
+  - triggers: [":section ", ":sect ", ":s "]
+    replace: "§"

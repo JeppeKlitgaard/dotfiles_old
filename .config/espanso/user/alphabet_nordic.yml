@@ -1,0 +1,15 @@
+name: alphabet_nordic
+parent: default
+
+matches:
+  - trigger: ":ae "
+    replace: "æ"
+    propagate_case: true
+
+  - trigger: ":oe "
+    replace: "ø"
+    propagate_case: true
+
+  - trigger: ":aa "
+    replace: "å"
+    propagate_case: true

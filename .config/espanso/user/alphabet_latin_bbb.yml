@@ -1,0 +1,14 @@
+name: alphabet_latin_bbb
+parent: default
+
+matches:
+  - trigger: ":Ba "
+    replace: "𝕒"
+  - trigger: ":BA "
+    replace: "𝔸"
+
+  - trigger: ":Ba "
+    replace: "𝕒"
+  - trigger: ":BA "
+    replace: "𝔸"
+

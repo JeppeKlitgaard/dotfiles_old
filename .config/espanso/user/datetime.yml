@@ -1,0 +1,19 @@
+name: datetime
+parent: default
+
+matches:
+- triggers: [":isod ", ":isodate "]
+  replace: "{{isodate}}"
+  vars:
+    - name: isodate
+      type: date
+      params:
+        format: "%F"  # ISO 8601 date
+
+- triggers: [":isodt ", ":isodatetime "]
+  replace: "{{isodatetime}}"
+  vars:
+    - name: isodatetime
+      type: date
+      params:
+        format: "%Y-%m-%dT%H:%M:%S%#z"  # ISO 8601 datetime

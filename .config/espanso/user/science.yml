@@ -1,0 +1,20 @@
+name: science
+parent: default
+
+matches:
+    # Degree/angle
+  - triggers: [":deg ", ":^o "]
+    replace: "°"
+
+  - triggers: [":degc ", ":^oc "]
+    replace: "℃"
+  - triggers: [":degf ", ":^of "]
+    replace: "℉"
+
+  - triggers: [":rad ", ":^c "]
+    replace: "ᶜ"
+  - triggers: [":urad "]
+    replace: "㎭"
+
+  - triggers: [":grad ", ":^g "]
+    replace: "ᵍ"

@@ -1,0 +1,6 @@
+name: abbreviations
+parent: default
+
+matches:
+  - triggers: [":iff "]
+    replace: "if and only if"
