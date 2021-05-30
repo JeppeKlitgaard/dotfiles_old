@@ -1,5 +1,0 @@
-#!/bin/fish
-
-### Espanso
-echo "Copying Espanso configuration" | boxes -a c -d html
-rsync -vr --delete "/mnt/c/Users/jeppe/AppData/Roaming/espanso/" "/home/jeppe/.config/espanso/"
