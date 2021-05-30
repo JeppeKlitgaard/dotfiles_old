@@ -48,6 +48,20 @@ local rawMatches = [
 
   #
   {
+    triggers: ['prod','PI',],
+    replace: '∏',
+  },
+  {
+    triggers: ['coprod'],
+    replace: '∐',
+  },
+  {
+    triggers: ['sum'],
+    replace: '∑',
+  },
+
+  #
+  {
     triggers: ['dagger','dag','hermitian','herm','h'],
     replace: '†',
   },
@@ -173,11 +187,33 @@ local rawMatches = [
     replace: '∢',
   },
 
+  ### Shapes
+  {
+    triggers: ['tangle', 'triangle'],
+    replace: '⊿',
+  },
+  {
+    triggers: ['sq', 'square'],
+    replace: '◻',
+  },
+
+
+  ### Proof
   {
     triggers: ['qed','halmos','tomb','tombstone'],
     replace: '∎',
   },
+  {
+    triggers: ['contra','lightning','bolt'],
+    replace: '↯',
+  },
+  {
+    triggers: ['vcontra', '::x'],
+    replace: '※',
+  },
 
+
+  ### Reading help
   {
     triggers: ['bourbaki','danger','bend'],
     replace: '☡',

@@ -29,10 +29,6 @@ local matches = [
     replace: '›',
   },
   {
-    trigger: ',:X',
-    replace: '※',
-  },
-  {
     trigger: ',dP',
     replace: '∂',
   },
@@ -43,14 +39,6 @@ local matches = [
   {
     trigger: ',NB',
     replace: '∇',
-  },
-  {
-    trigger: ',*P',
-    replace: '∏',
-  },
-  {
-    trigger: ',+Z',
-    replace: '∑',
   },
   {
     trigger: ',PP',
