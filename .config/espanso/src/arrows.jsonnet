@@ -117,6 +117,7 @@ local rawMatches = [
       'Lra',
       'Leftrightarrow',
       '<==>',
+      '=',
     ],
     replace: '⇔',
   },

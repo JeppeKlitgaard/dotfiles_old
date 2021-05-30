@@ -6,6 +6,12 @@ local pre_trigger = g.PRE_DIACRITIC;
 local post_trigger = "'" + g.POST;
 
 local rawMatches = [
+  ### Symbol
+  {
+    trigger: "'",
+    replace: '´',
+  },
+
   ### Lower case
   {
     trigger: 'a',

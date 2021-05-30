@@ -2,46 +2,32 @@ local g = import 'lib/base.libsonnet';
 
 local rawMatches = [
   {
-    triggers: [
-      'currency',
-    ],
+    triggers: ['currency'],
     replace: '¤',
   },
 
   {
-    triggers: [
-      'cent',
-    ],
+    triggers: ['cent'],
     replace: '¢',
   },
 
   {
-    triggers: [
-      'gbp',
-      'pd',
-    ],
+    triggers: ['gbp','pd'],
     replace: '£',
   },
 
   {
-    triggers: [
-      'eu',
-      'euro',
-    ],
+    triggers: ['eu','euro'],
     replace: '€',
   },
 
   {
-    triggers: [
-      'ruble',
-    ],
+    triggers: ['ruble'],
     replace: '₽',
   },
 
   {
-    triggers: [
-      'yen'
-    ],
+    triggers: ['yen'],
     replace: '¥',
   },
 ];

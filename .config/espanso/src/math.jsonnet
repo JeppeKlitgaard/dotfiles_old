@@ -3,363 +3,239 @@ local g = import 'lib/base.libsonnet';
 local rawMatches = [
   ### Operators
   {
-    triggers: [
-      'pm',
-      '+-',
-    ],
+    triggers: ['pm', '+-'],
     replace: '±',
   },
   {
-    triggers: [
-      'mp',
-      '-+',
-    ],
+    triggers: ['mp', '-+'],
     replace: '∓',
   },
 
   #
   {
-    triggers: [
-      'cdot',
-      '.',
-    ],
+    triggers: ['cdot', '.'],
     replace: '⋅',
   },
   {
-    triggers: [
-      'Cdot',
-      '*',
-    ],
+    triggers: ['Cdot', '*'],
     replace: '∙',
   },
 
   #
   {
-    triggers: [
-      'ring',
-      'o',
-    ],
+    triggers: ['ring','o'],
     replace: '∘',
   },
   {
-    triggers: [
-      'Ring',
-      'O',
-    ],
+    triggers: ['Ring','O'],
     replace: '〇',
   },
 
-  #
   {
-    triggers: [
-      'dagger',
-      'dag',
-      'hermitian',
-      'herm',
-      'h',
-    ],
-    replace: '†',
-  },
-  {
-    triggers: [
-      'ddagger',
-      'ddag',
-    ],
-    replace: '‡',
+    triggers: ['star'],
+    replace: '∗',
   },
 
   #
   {
-    triggers: [
-      'cross',
-      'multiplication',
-      'mult',
-      'x',
-    ],
+    triggers: ['cross','multiplication','mult','x'],
     replace: '×',
   },
   {
-    triggers: [
-      'division',
-      'div',
-      '%',
-    ],
+    triggers: ['division','div','%', '-:'],
     replace: '÷',
   },
 
+  #
+  {
+    triggers: ['dagger','dag','hermitian','herm','h'],
+    replace: '†',
+  },
+  {
+    triggers: ['ddagger','ddag'],
+    replace: '‡',
+  },
+
+
   # Roots
   {
-    triggers: [
-      'sqrt',
-      '2rt',
-      'root',
-    ],
+    triggers: ['sqrt','2rt','root'],
     replace: '√',
   },
   {
-    triggers: [
-      'cbrt',
-      '3rt',
-    ],
+    triggers: ['cbrt','3rt'],
     replace: '∛',
   },
   {
-    triggers: [
-      '4rt',
-    ],
+    triggers: ['4rt'],
     replace: '∜',
   },
 
   ### Logic
   {
-    triggers: [
-      'and',
-    ],
+    triggers: ['and'],
     replace: '∧',
   },
   {
-    triggers: [
-      'or',
-    ],
+    triggers: ['or'],
     replace: '∨',
   },
 
   {
-    triggers: [
-      'neg',
-      '!',
-    ],
+    triggers: ['neg','!'],
     replace: '¬',
   },
   {
-    triggers: [
-      'Neg',
-      '!!',
-    ],
+    triggers: ['Neg','!!'],
     replace: '￢',
   },
 
   {
-    triggers: [
-      'true',
-      't',
-    ],
+    triggers: ['true','t'],
     replace: '〒',
   },
   {
-    triggers: [
-      'True',
-      'T',
-    ],
+    triggers: ['True','T'],
     replace: '┳',
   },
   {
-    triggers: [
-      'false',
-      'f',
-    ],
+    triggers: ['false','f'],
     replace: '⊥',
   },
   {
-    triggers: [
-      'False',
-      'F',
-    ],
+    triggers: ['False','F'],
     replace: '┻',
   },
 
   ### Denominators
   {
-    triggers: [
-      'permille',
-      '%0',
-    ],
+    triggers: ['permille','%0'],
     replace: '‰',
   },
   {
-    triggers: [
-      'per10k',
-      '%00',
-    ],
+    triggers: ['per10k','%00'],
     replace: '‱',
   },
 
   ### Comparators
   {
-    triggers: [
-      'neq',
-      '=/',
-    ],
+    triggers: ['neq','=/'],
     replace: '≠',
   },
 
+  # Approx
   {
-    triggers: [
-      'approximation',
-      'approx',
-      'a',
-    ],
+    triggers: ['approx','a','~~'],
     replace: '≈',
+  },
+  {
+    triggers: ['~'],
+    replace: '∼',
+  },
+  {
+    trigger: ',?-',
+    replace: '≃',
+  },
+  {
+    trigger: ',?=',
+    replace: '≅',
   },
 
   {
-    triggers: [
-      '>=',
-      'geq',
-    ],
+    triggers: ['>=','geq'],
     replace: '≥',
   },
   {
-    triggers: [
-      '<=',
-      'leq',
-    ],
+    triggers: ['<=','leq'],
     replace: '≤',
   },
 
   ### Symbols
   {
-    triggers: [
-      'i',
-      'inf',
-      'infty',
-    ],
+    triggers: ['i','inf','infty'],
     replace: '∞',
   },
 
   {
-    triggers: [
-      'angle',
-      '<',
-    ],
+    triggers: ['angle','<'],
     replace: '∠',
   },
   {
-    triggers: [
-      'mangle',
-    ],
+    triggers: ['rangle'],
+    replace: '∟',
+  },
+  {
+    triggers: ['mangle'],
     replace: '∡',
   },
   {
-    triggers: [
-      'sangle',
-    ],
+    triggers: ['sangle'],
     replace: '∢',
   },
 
   {
-    triggers: [
-      'qed',
-      'halmos',
-      'tomb',
-      'tombstone',
-    ],
+    triggers: ['qed','halmos','tomb','tombstone'],
     replace: '∎',
   },
 
   {
-    triggers: [
-      'bourbaki',
-      'danger',
-      'bend',
-    ],
+    triggers: ['bourbaki','danger','bend'],
     replace: '☡',
   },
 
   ### Text Logic
   {
-    triggers: [
-      'forall',
-      'fa',
-    ],
+    triggers: ['forall','fa'],
     replace: '∀',
   },
 
   {
-    triggers: [
-      'thereexists',
-      'exists',
-      'te',
-    ],
+    triggers: ['thereexists','exists','te'],
     replace: '∃',
   },
   {
-    triggers: [
-      '!thereexists',
-      '!exists',
-      '!te',
-    ],
+    triggers: ['!thereexists','!exists','!te'],
     replace: '∄',
   },
 
   {
-    triggers: [
-      'therefore',
-      'thus',
-      'tf',
-      't4',
-      ':.'
-    ],
+    triggers: ['therefore','thus','tf','t4',':.'],
     replace: '∴',
   },
   {
-    triggers: [
-      'because',
-      'bc',
-      '.:',
-    ],
+    triggers: ['because','bc','.:'],
     replace: '∵',
   },
   {
-    triggers: [
-      'ratio',
-    ],
+    triggers: ['ratio'],
     replace: '∶',
   },
   {
-    triggers: [
-      'proportion',
-      'prop',
-      ': '
-    ],
+    triggers: ['proportion','prop',': '],
     replace: '∷',
   },
 
   ### Set and Group
   {
-    triggers: [
-      'emptyset',
-      'empty',
-      'O/',
-    ],
+    triggers: ['emptyset','empty','O/'],
     replace: '∅',
   },
 
   {
-    triggers: [
-      'in',
-    ],
+    triggers: ['in'],
     replace: '∈',
   },
   {
-    triggers: [
-      '!in',
-    ],
+    triggers: ['!in'],
     replace: '∉',
   },
 
   {
-    triggers: [
-      'contains',
-      'ni',
-    ],
+    triggers: ['contains','ni'],
     replace: '∋',
   },
   {
-    triggers: [
-      '!contains',
-      '!ni',
-    ],
+    triggers: ['!contains','!ni'],
     replace: '∌',
   },
 ];

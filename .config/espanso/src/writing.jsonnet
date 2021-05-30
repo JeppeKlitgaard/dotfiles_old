@@ -19,6 +19,16 @@ local rawMatches = [
     replace: '–',
   },
 
+  ### Quotes
+  {
+    triggers: ['l"'],
+    replace: '“',
+  },
+  {
+    triggers: ['r"'],
+    replace: '”',
+  },
+
   ### Ellipsis
   {
     triggers: [

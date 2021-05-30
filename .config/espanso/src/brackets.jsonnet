@@ -2,22 +2,14 @@ local g = import 'lib/base.libsonnet';
 
 local rawMatches = [
 
-  # ┌┐└┘
+  # 〈〉
   {
-    trigger: "|'",
-    replace: '┌',
+    trigger: '</',
+    replace: '〈',
   },
   {
-    trigger: "'|",
-    replace: '┐',
-  },
-  {
-    trigger: '|_',
-    replace: '└',
-  },
-  {
-    trigger: '_|',
-    replace: '┘',
+    trigger: '/>',
+    replace: '〉',
   },
 
   # 《》
@@ -30,14 +22,32 @@ local rawMatches = [
     replace: '》',
   },
 
-  # 「」
+  # «»
   {
-    trigger: "<'",
-    replace: '「',
+    trigger: '<_',
+    replace: '«',
   },
   {
-    trigger: ">'",
-    replace: '」',
+    trigger: '>_',
+    replace: '»',
+  },
+
+  # ⌈ ⌉ ⌊ ⌋
+  {
+    trigger: '|^',
+    replace: '⌈',
+  },
+  {
+    trigger: '^|',
+    replace: '⌉',
+  },
+  {
+    trigger: '|_',
+    replace: '⌊',
+  },
+  {
+    trigger: '_|',
+    replace: '⌋',
   },
 
   # 『』

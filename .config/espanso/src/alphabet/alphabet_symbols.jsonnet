@@ -11,37 +11,40 @@ local rawMatches = [
     trigger: '!',
     replace: '¡',
   },
+  {
+    triggers: ['?!','!?'],
+    replace: '‽',
+  },
+
+  # Marks
+  {
+    trigger: 'tm',
+    replace: '™',
+  },
+  {
+    trigger: 'cr',
+    replace: '©',
+  },
 
   # Hbar
   {
-    triggers: [
-      'hbar',
-    ],
+    trigger: 'hbar',
     replace: 'ℏ',
   },
 
   # Fancy E
   {
-    triggers: [
-      'euler',
-      'e',
-    ],
+    triggers: ['euler','e'],
     replace: '𝑒',
   },
 
   # Fancy L
   {
-    triggers: [
-      'ell',
-      'l',
-    ],
+    triggers: ['ell','l'],
     replace: 'ℓ',
   },
   {
-    triggers: [
-      'Ell',
-      'L',
-    ],
+    triggers: ['Ell','L'],
     replace: 'ℒ',
   },
 

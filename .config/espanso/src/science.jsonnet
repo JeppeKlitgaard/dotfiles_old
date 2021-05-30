@@ -3,49 +3,32 @@ local g = import 'lib/base.libsonnet';
 local rawMatches = [
   ### Degree/angle
   {
-    triggers: [
-      'deg',
-      '^o',
-    ],
+    triggers: ['deg','^o'],
     replace: '°',
   },
 
   # Temperature
   {
-    triggers: [
-      'degc',
-      '^oc',
-    ],
+    triggers: ['degc','^oc'],
     replace: '℃',
   },
   {
-    triggers: [
-      'degf',
-      '^of',
-    ],
+    triggers: ['degf','^of'],
     replace: '℉',
   },
 
   # Angle
   {
-    triggers: [
-      'rad',
-      '^c',
-    ],
+    triggers: ['rad','^c'],
     replace: 'ᶜ',
   },
   {
-    triggers: [
-      'urad',
-    ],
+    triggers: ['urad'],
     replace: '㎭',
   },
 
   {
-    triggers: [
-      'grad',
-      '^g',
-    ],
+    triggers: ['grad','^g'],
     replace: 'ᵍ',
   },
 ];
