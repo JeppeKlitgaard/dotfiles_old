@@ -1,10 +1,11 @@
-local g = import 'base.libsonnet';
+local g = import '../lib/base.libsonnet';
+local m = import '../lib/modifiers.libsonnet';
 
 local L_PRE = g.PRE;
 local L_POST = g.POST;
 
-local S_PRE = ";";
-local S_POST = "";
+local S_PRE = ';';
+local S_POST = '';
 
 local rawMatches = [
 {

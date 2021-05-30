@@ -5,11 +5,15 @@ local addPrePost(trigger, pre, post) =
 ;
 
 {
-    PARENT: "default",
-    PRE: ":",
-    POST: " ",
+    PARENT: 'default',
+    PRE: ':',
+    POST: ' ',
 
-    LATIN_ALPHABET_LENGTH: 25,
+    PRE_DIACRITIC: ',',
+    PRE_BBB: self.PRE + 'bb',
+
+    LATIN_ALPHABET_LENGTH: 26,
+    DECIMAL_ALPHABET_LENGTH: 10,
 
     processFilename: utils.processFilename,
     generateUnicodeArray: utils.generateUnicodeArray,
@@ -18,14 +22,14 @@ local addPrePost(trigger, pre, post) =
         # Function that adds the specified pre/post triggers the triggers of
         # a matches array
         match + {
-            [if "triggers" in match then "triggers"]:
+            [if 'triggers' in match then 'triggers']:
                 [
                     addPrePost(trigger, pre, post)
 
-                    for trigger in match["triggers"]
+                    for trigger in match['triggers']
                 ],
 
-            [if "trigger" in match then "trigger"]: addPrePost(match["trigger"], pre, post),
+            [if 'trigger' in match then 'trigger']: addPrePost(match['trigger'], pre, post),
         }
         for match in rawMatches
     ],

@@ -1,20 +1,21 @@
 local g = import 'base.libsonnet';
+local m = import 'modifiers.libsonnet';
+
+local normal_ = g.generateUnicodeArray("A", g.LATIN_ALPHABET_LENGTH);
+local new_ = g.generateUnicodeArray("Á", g.LATIN_ALPHABET_LENGTH);
 
 
-// Convert back to array
-local toNamedArray(map) = [{ name: x } + map[x] for x in std.objectFields(map)];
+local rawMatches = [
+    {
+        trigger: normal_[i],
+        replace: new_[i],
+    },
+    for i in std.range(0, std.length(normal_) - 1)
+];
 
 {
-    local normal_lower = g.generateUnicodeArray("a", g.LATIN_ALPHABET_LENGTH),
-    local normal_upper = g.generateUnicodeArray("A", g.LATIN_ALPHABET_LENGTH),
-
-    local bb_lower = g.generateUnicodeArray("𝕒", g.LATIN_ALPHABET_LENGTH),
-    local bb_upper = g.generateUnicodeArray("𝔸", g.LATIN_ALPHABET_LENGTH),
-    # bb_upper needs some manual fixing due to common math BB being defined in
-    # different codepoint range
-
-    bb_lower_: bb_lower,
-    bb_upper_: bb_upper,
-
+    normal: normal_,
+    new: new_,
+    matches: rawMatches,
 
 }

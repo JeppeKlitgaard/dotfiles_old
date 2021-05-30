@@ -1,4 +1,4 @@
-local g = import 'base.libsonnet';
+local g = import 'lib/base.libsonnet';
 
 local rawMatches = [
   # 2
@@ -19,7 +19,7 @@ local rawMatches = [
     replace: '⅓',
   },
   {
-    trigger: '2/3',
+    triggers: ['2/3'],
     replace: '⅔',
   },
 
@@ -138,7 +138,6 @@ local rawMatches = [
 
 std.manifestYamlDoc(
   {
-    // name: std.split(std.thisFile, ".")[0],
     name: g.processFilename(std.thisFile),
     parent: g.PARENT,
 

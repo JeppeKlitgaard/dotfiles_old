@@ -1,0 +1,450 @@
+local matches = [
+
+  {
+    trigger: ',BB',
+    replace: '¦',
+  },
+  {
+    trigger: ',Co',
+    replace: '©',
+  },
+  {
+    trigger: ',<<',
+    replace: '«',:
+  },
+  {
+    trigger: ',Rg',
+    replace: '®',
+  },
+  {
+    trigger: ",'m",
+    replace: '¯',
+  },
+  {
+    trigger: ",''",
+    replace: '´',
+  },
+  {
+    trigger: ',-o',
+    replace: 'º',
+  },
+  {
+    trigger: ',>>',
+    replace: '»',
+  },
+  {
+    trigger: ',-:',
+    replace: '÷',
+  },
+  {
+    trigger: ',IJ',
+    replace: 'Ĳ',
+  },
+  {
+    trigger: ',ij',
+    replace: 'ĳ',
+  },
+  {
+    trigger: ',NG',
+    replace: 'Ŋ',
+  },
+  {
+    trigger: ',ng',
+    replace: 'ŋ',
+  },
+  {
+    trigger: ',U0',
+    replace: 'Ů',
+  },
+  {
+    trigger: ',u0',
+    replace: 'ů',
+  },
+  {
+    trigger: ',OI',
+    replace: 'Ƣ',
+  },
+  {
+    trigger: ',oi',
+    replace: 'ƣ',
+  },
+  {
+    trigger: ',yr',
+    replace: 'Ʀ',
+  },
+  {
+    trigger: ',ED',
+    replace: 'Ʒ',
+  },
+  {
+    trigger: ',O1',
+    replace: 'Ǭ',
+  },
+  {
+    trigger: ',o1',
+    replace: 'ǭ',
+  },
+  {
+    trigger: ',EZ',
+    replace: 'Ǯ',
+  },
+  {
+    trigger: ',ez',
+    replace: 'ǯ',
+  },
+
+  {
+    trigger: ',;S',
+    replace: 'ʿ',
+  },
+  {
+    trigger: ",'0",
+    replace: '˚',
+  },
+
+  {
+    trigger: ",'\"",
+    replace: '˝',
+  },
+  {
+    trigger: ',IE',
+    replace: 'Є',
+  },
+  {
+    trigger: ',ie',
+    replace: 'є',
+  },
+  {
+    trigger: ',w0',
+    replace: 'ẘ',
+  },
+  {
+    trigger: ',y0',
+    replace: 'ẙ',
+  },
+  {
+    trigger: ',!2',
+    replace: '‖',
+  },
+  {
+    trigger: ',=2',
+    replace: '‗',
+  },
+  {
+    trigger: ",'6",
+    replace: '‘',
+  },
+  {
+    trigger: ",'9",
+    replace: '’',
+  },
+  {
+    trigger: ',.9',
+    replace: '‚',
+  },
+  {
+    trigger: ",9'",
+    replace: '‛',
+  },
+  {
+    trigger: ',"6',
+    replace: '“',
+  },
+  {
+    trigger: ',"9',
+    replace: '”',
+  },
+  {
+    trigger: ',:9',
+    replace: '„',
+  },
+  {
+    trigger: ',9"',
+    replace: '‟',
+  },
+  {
+    trigger: ',<1',
+    replace: '‹',
+  },
+  {
+    trigger: ',>1',
+    replace: '›',
+  },
+  {
+    trigger: ',:X',
+    replace: '※',
+  },
+  {
+    trigger: ',Pt',
+    replace: '₧',
+  },
+  {
+    trigger: ',oC',
+    replace: '℃',
+  },
+  {
+    trigger: ',oF',
+    replace: '℉',
+  },
+  {
+    trigger: ',N0',
+    replace: '№',
+  },
+  {
+    trigger: ',PO',
+    replace: '℗',
+  },
+  {
+    trigger: ',Rx',
+    replace: '℞',
+  },
+  {
+    trigger: ',SM',
+    replace: '℠',
+  },
+  {
+    trigger: ',TM',
+    replace: '™',
+  },
+  {
+    trigger: ',<-',
+    replace: '←',
+  },
+  {
+    trigger: ',-!',
+    replace: '↑',
+  },
+  {
+    trigger: ',->',
+    replace: '→',
+  },
+  {
+    trigger: ',-v',
+    replace: '↓',
+  },
+  {
+    trigger: ',<>',
+    replace: '↔',
+  },
+  {
+    trigger: ',UD',
+    replace: '↕',
+  },
+  {
+    trigger: ',==',
+    replace: '⇔',
+  },
+  {
+    trigger: ',dP',
+    replace: '∂',
+  },
+  {
+    trigger: ',DE',
+    replace: '∆',
+  },
+  {
+    trigger: ',NB',
+    replace: '∇',
+  },
+  {
+    trigger: ',*P',
+    replace: '∏',
+  },
+  {
+    trigger: ',+Z',
+    replace: '∑',
+  },
+  {
+    trigger: ',-2',
+    replace: '−',
+  },
+  {
+    trigger: ',*-',
+    replace: '∗',
+  },
+  {
+    trigger: ',Ob',
+    replace: '∘',
+  },
+  {
+    trigger: ',Sb',
+    replace: '∙',
+  },
+  {
+    trigger: ',-L',
+    replace: '∟',
+  },
+  {
+    trigger: ',PP',
+    replace: '∥',
+  },
+  {
+    trigger: ',(U',
+    replace: '∩',
+  },
+  {
+    trigger: ',)U',
+    replace: '∪',
+  },
+  {
+    trigger: ',In',
+    replace: '∫',
+  },
+  {
+    trigger: ',DI',
+    replace: '∬',
+  },
+  {
+    trigger: ',Io',
+    replace: '∮',
+  },
+  {
+    trigger: ',?1',
+    replace: '∼',
+  },
+  {
+    trigger: ',?-',
+    replace: '≃',
+  },
+  {
+    trigger: ',?=',
+    replace: '≅',
+  },
+  {
+    trigger: ',?2',
+    replace: '≈',
+  },
+  {
+    trigger: ',=?',
+    replace: '≌',
+  },
+  {
+    trigger: ',<*',
+    replace: '≪',
+  },
+  {
+    trigger: ',*>',
+    replace: '≫',
+  },
+  {
+    trigger: ',!<',
+    replace: '≮',
+  },
+  {
+    trigger: ',!>',
+    replace: '≯',
+  },
+  {
+    trigger: ',(C',
+    replace: '⊂',
+  },
+  {
+    trigger: ',)C',
+    replace: '⊃',
+  },
+  {
+    trigger: ',(_',
+    replace: '⊆',
+  },
+  {
+    trigger: ',)_',
+    replace: '⊇',
+  },
+  {
+    trigger: ',0.',
+    replace: '⊙',
+  },
+  {
+    trigger: ',02',
+    replace: '⊚',
+  },
+  {
+    trigger: ',.P',
+    replace: '⋅',
+  },
+  {
+    trigger: ',:3',
+    replace: '⋮',
+  },
+  {
+    trigger: ',Eh',
+    replace: '⌂',
+  },
+  {
+    trigger: ',<7',
+    replace: '⌈',
+  },
+  {
+    trigger: ',>7',
+    replace: '⌉',
+  },
+  {
+    trigger: ',7<',
+    replace: '⌊',
+  },
+  {
+    trigger: ',7>',
+    replace: '⌋',
+  },
+  {
+    trigger: ',NI',
+    replace: '⌐',
+  },
+  {
+    trigger: ',(A',
+    replace: '⌒',
+  },
+  {
+    trigger: ',TR',
+    replace: '⌕',
+  },
+  {
+    trigger: ',Iu',
+    replace: '⌠',
+  },
+  {
+    trigger: ',Il',
+    replace: '⌡',
+  },
+  {
+    trigger: ',</',
+    replace: '〈',
+  },
+  {
+    trigger: ',/>',
+    replace: '〉',
+  },
+  {
+    trigger: ',hh',
+    replace: '─',
+  },
+  {
+    trigger: ',HH',
+    replace: '━',
+  },
+  {
+    trigger: ',vv',
+    replace: '│',
+  },
+  {
+    trigger: ',VV',
+    replace: '┃',
+  },
+  {
+    trigger: ',3-',
+    replace: '┄',
+  },
+  {
+    trigger: ',3_',
+    replace: '┅',
+  },
+  {
+    trigger: ',3!',
+    replace: '┆',
+  },
+  {
+    trigger: ',3/',
+    replace: '┇',
+  },
+
+],
