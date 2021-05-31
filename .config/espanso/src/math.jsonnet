@@ -523,7 +523,7 @@ local rawMatches = [
   },
 
   {
-    triggers: ['between', ')('],
+    triggers: ['between', 'btwn', ')('],
     replace: '≬',
   },
 
