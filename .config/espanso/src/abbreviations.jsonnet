@@ -1,10 +1,6 @@
 local g = import 'lib/base.libsonnet';
 
 local rawMatches = [
-  {
-    trigger: 'iff',
-    replace: 'if and only if',
-  },
 ];
 
 std.manifestYamlDoc(

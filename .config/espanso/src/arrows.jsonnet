@@ -154,6 +154,59 @@ local rawMatches = [
     replace: '⇕',
   },
 
+  # Long single arrows
+  {
+    triggers: [
+      'Lla',
+      'longleftarrow',
+      '<---'
+    ],
+    replace: '⟵',
+  },
+  {
+    triggers: [
+      'Lra',
+      'longrightarrow',
+      '--->'
+    ],
+    replace: '⟶',
+  },
+  {
+    triggers: [
+      'Llra',
+      'longleftrightarrow',
+      '<--->'
+    ],
+    replace: '⟷',
+  },
+
+  # Long double arrows
+  {
+    triggers: [
+      'LLa',
+      'longLeftarrow',
+      '<==='
+    ],
+    replace: '⟸',
+  },
+  {
+    triggers: [
+      'LRa',
+      'longRightarrow',
+      '===>'
+    ],
+    replace: '⟹',
+  },
+  {
+    triggers: [
+      'LLra',
+      'longLeftrightarrow',
+      '<===>',
+      'iff'
+    ],
+    replace: '⟺',
+  },
+
   # Harpoon arrows
   {
     triggers: [
