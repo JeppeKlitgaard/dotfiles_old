@@ -25,54 +25,6 @@ local matches = [
     replace: '›',
   },
   {
-    trigger: ',dP',
-    replace: '∂',
-  },
-  {
-    trigger: ',NB',
-    replace: '∇',
-  },
-  {
-    trigger: ',(U',
-    replace: '∩',
-  },
-  {
-    trigger: ',)U',
-    replace: '∪',
-  },
-  {
-    trigger: ',<*',
-    replace: '≪',
-  },
-  {
-    trigger: ',*>',
-    replace: '≫',
-  },
-  {
-    trigger: ',!<',
-    replace: '≮',
-  },
-  {
-    trigger: ',!>',
-    replace: '≯',
-  },
-  {
-    trigger: ',(C',
-    replace: '⊂',
-  },
-  {
-    trigger: ',)C',
-    replace: '⊃',
-  },
-  {
-    trigger: ',(_',
-    replace: '⊆',
-  },
-  {
-    trigger: ',)_',
-    replace: '⊇',
-  },
-  {
     trigger: ',vv',
     replace: '│',
   },

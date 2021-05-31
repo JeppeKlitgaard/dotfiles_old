@@ -37,11 +37,11 @@ local rawMatches = [
 
   #
   {
-    triggers: ['ring','o'],
+    triggers: ['ring', 'o'],
     replace: '∘',
   },
   {
-    triggers: ['Ring','O'],
+    triggers: ['Ring', 'O'],
     replace: '〇',
   },
 
@@ -52,17 +52,21 @@ local rawMatches = [
 
   #
   {
-    triggers: ['cross','multiplication','mult','x'],
+    triggers: ['cross', 'multiplication', 'mult', 'x'],
     replace: '×',
   },
   {
-    triggers: ['division','div','%', '-:'],
+    triggers: ['division', '%', '-:'],
     replace: '÷',
+  },
+  {
+    triggers: ['divtimes', '%*', '*%'],
+    replace: '⋇',
   },
 
   #
   {
-    triggers: ['prod','PI',],
+    triggers: ['prod', 'PI',],
     replace: '∏',
   },
   {
@@ -76,22 +80,53 @@ local rawMatches = [
 
   #
   {
-    triggers: ['dagger','dag','hermitian','herm','h'],
+    triggers: ['dagger', 'dag', 'hermitian', 'herm', 'h'],
     replace: '†',
   },
   {
-    triggers: ['ddagger','ddag'],
+    triggers: ['ddagger', 'ddag'],
     replace: '‡',
+  },
+
+  # Derivatives
+  {
+    triggers: ['d', 'partial', 'part'],
+    replace: '∂',
+  },
+  {
+    triggers: ['nabla', 'del', 'grad'],
+    replace: '∇',
+  },
+  {
+    triggers: ['Nabla', 'Del'],
+    replace: '𝛁',
+  },
+
+  {
+    triggers: ['divergence', 'div'],
+    replace: '∇ ⋅',
+  },
+  {
+    triggers: ['curl'],
+    replace: '∇² ×',
+  },
+  {
+    triggers: ['laplacian', 'lapl'],
+    replace: '∇²',
+  },
+  {
+    triggers: ['Laplacian', 'Lapl'],
+    replace: '𝛁²',
   },
 
 
   # Roots
   {
-    triggers: ['sqrt','2rt','root'],
+    triggers: ['sqrt', '2rt', 'root'],
     replace: '√',
   },
   {
-    triggers: ['cbrt','3rt'],
+    triggers: ['cbrt', '3rt'],
     replace: '∛',
   },
   {
@@ -101,62 +136,62 @@ local rawMatches = [
 
   ### Logic
   {
-    triggers: ['and'],
-    replace: '∧',
+    triggers: ['and', '^'],
+    replace: '⋀',
   },
   {
-    triggers: ['or'],
-    replace: '∨',
+    triggers: ['or', 'v'],
+    replace: '⋁',
   },
 
   {
-    triggers: ['neg','!'],
+    triggers: ['neg', '!'],
     replace: '¬',
   },
   {
-    triggers: ['Neg','!!'],
+    triggers: ['Neg', '!!'],
     replace: '￢',
   },
 
   {
-    triggers: ['true','t'],
+    triggers: ['true', 't'],
     replace: '〒',
   },
   {
-    triggers: ['True','T'],
+    triggers: ['True', 'T'],
     replace: '┳',
   },
   {
-    triggers: ['false','f'],
+    triggers: ['false', 'f'],
     replace: '⊥',
   },
   {
-    triggers: ['False','F'],
+    triggers: ['False', 'F'],
     replace: '┻',
   },
 
   ### Denominators
   {
-    triggers: ['permille','%0'],
+    triggers: ['permille', '%0'],
     replace: '‰',
   },
   {
-    triggers: ['per10k','%00'],
+    triggers: ['per10k', '%00'],
     replace: '‱',
   },
 
-  ### Comparators
+  ### Relations
   {
-    triggers: ['neq','=/'],
+    triggers: ['neq', '=/'],
     replace: '≠',
   },
 
   {
-    triggers: ['equiv','eq', '3-'],
+    triggers: ['equiv', 'eq', '3-'],
     replace: '≡',
   },
   {
-    triggers: ['!equiv','!eq', '!3-'],
+    triggers: ['!equiv', '!eq', '!3-'],
     replace: '≢',
   },
 
@@ -207,15 +242,22 @@ local rawMatches = [
     replace: '≟',
   },
 
-
   # Approx
-  {
-    triggers: ['approx','a','~~'],
-    replace: '≈',
-  },
   {
     triggers: ['~'],
     replace: '∼',
+  },
+  {
+    triggers: ['approx', 'a', '~~'],
+    replace: '≈',
+  },
+  {
+    triggers: ['!approx', '!a', '!~~'],
+    replace: '≉',
+  },
+  {
+    triggers: ['~~~'],
+    replace: '≋',
   },
   {
     trigger: ',?-',
@@ -226,24 +268,88 @@ local rawMatches = [
     replace: '≅',
   },
 
+  ### Less than, greater than
   {
-    triggers: ['>=','geq'],
+    triggers: ['>=', 'geq'],
     replace: '≥',
   },
   {
-    triggers: ['<=','leq'],
+    triggers: ['<=', 'leq'],
     replace: '≤',
+  },
+
+  {
+    triggers: ['!>=', '!geq'],
+    replace: '≱',
+  },
+  {
+    triggers: ['!<=', '!leq'],
+    replace: '≰',
+  },
+
+  {
+    triggers: ['>>', 'gg'],
+    replace: '≫',
+  },
+  {
+    triggers: ['<<', 'll'],
+    replace: '≪',
+  },
+
+  {
+    triggers: ['>>>', 'ggg'],
+    replace: '⋙',
+  },
+  {
+    triggers: ['<<<', 'lll'],
+    replace: '⋘',
+  },
+
+  {
+    triggers: ['>~', 'g~'],
+    replace: '≳',
+  },
+  {
+    triggers: ['<~', 'l~'],
+    replace: '≲',
+  },
+
+  {
+    triggers: ['!>~', '!g~'],
+    replace: '≱',
+  },
+  {
+    triggers: ['!<~', '!l~'],
+    replace: '≴',
+  },
+
+  {
+    triggers: ['<>', 'ltgt'],
+    replace: '≶',
+  },
+  {
+    triggers: ['><', 'gtlt'],
+    replace: '≷',
+  },
+
+  {
+    triggers: ['!<>', '!ltgt'],
+    replace: '≸',
+  },
+  {
+    triggers: ['!><', '!gtlt'],
+    replace: '≹',
   },
 
   ### Symbols
   {
-    triggers: ['i','inf','infty'],
+    triggers: ['i', 'inf', 'infty'],
     replace: '∞',
   },
 
   ### Angles
   {
-    triggers: ['angle','<'],
+    triggers: ['angle', '<'],
     replace: '∠',
   },
   {
@@ -337,6 +443,16 @@ local rawMatches = [
     replace: '⊡',
   },
 
+  ### Pointy triangles
+  {
+    triggers: ['<|', 'ltangle'],
+    replace: '◁',
+  },
+  {
+    triggers: ['|>', 'rtangle'],
+    replace: '▷',
+  },
+
   ### Other Shapes
   {
     triggers: ['tangle', 'triangle'],
@@ -352,13 +468,14 @@ local rawMatches = [
   },
 
 
+
   ### Proof
   {
-    triggers: ['qed','halmos','tomb','tombstone'],
+    triggers: ['qed', 'halmos', 'tomb', 'tombstone'],
     replace: '∎',
   },
   {
-    triggers: ['contra','lightning','bolt'],
+    triggers: ['contra', 'lightning', 'bolt'],
     replace: '↯',
   },
   {
@@ -369,31 +486,31 @@ local rawMatches = [
 
   ### Reading help
   {
-    triggers: ['bourbaki','danger','bend'],
+    triggers: ['bourbaki', 'danger', 'bend'],
     replace: '☡',
   },
 
   ### Text Logic
   {
-    triggers: ['forall','fa'],
+    triggers: ['forall', 'fa'],
     replace: '∀',
   },
 
   {
-    triggers: ['thereexists','exists','te'],
+    triggers: ['thereexists', 'exists', 'te'],
     replace: '∃',
   },
   {
-    triggers: ['!thereexists','!exists','!te'],
+    triggers: ['!thereexists', '!exists', '!te'],
     replace: '∄',
   },
 
   {
-    triggers: ['therefore','thus','tf','t4',':.'],
+    triggers: ['therefore', 'thus', 'tf', 't4', ':.'],
     replace: '∴',
   },
   {
-    triggers: ['because','bc','.:'],
+    triggers: ['because', 'bc', '.:'],
     replace: '∵',
   },
   {
@@ -401,9 +518,15 @@ local rawMatches = [
     replace: '∶',
   },
   {
-    triggers: ['proportion','prop',': '],
+    triggers: ['proportion', 'prop', ': '],
     replace: '∷',
   },
+
+  {
+    triggers: ['between', ')('],
+    replace: '≬',
+  },
+
 
   ### Integrals
   {
@@ -456,7 +579,7 @@ local rawMatches = [
 
   ### Set and Group
   {
-    triggers: ['emptyset','empty','O/'],
+    triggers: ['emptyset', 'empty', 'O/'],
     replace: '∅',
   },
 
@@ -470,13 +593,56 @@ local rawMatches = [
   },
 
   {
-    triggers: ['contains','ni'],
+    triggers: ['contains', 'ni'],
     replace: '∋',
   },
   {
-    triggers: ['!contains','!ni'],
+    triggers: ['!contains', '!ni'],
     replace: '∌',
   },
+
+  {
+    triggers: ['subset', 'subs'],
+    replace: '⊂',
+  },
+  {
+    triggers: ['superset', 'supers', 'sups'],
+    replace: '⊃',
+  },
+  {
+    triggers: ['!subset', '!subs'],
+    replace: '⊄',
+  },
+  {
+    triggers: ['!superset', '!supers', '!sups'],
+    replace: '⊅',
+  },
+  {
+    triggers: ['subseteq', 'subseq', 'subs='],
+    replace: '⊆',
+  },
+  {
+    triggers: ['superseteq', 'superseq', 'supseq', 'sups='],
+    replace: '⊇',
+  },
+  {
+    triggers: ['!subseteq', '!subsneq', 'subs!=', '!subs='],
+    replace: '⊈',
+  },
+  {
+    triggers: ['!superseteq', '!superseq', '!supseq', '!sups=', 'sups!='],
+    replace: '⊉',
+  },
+
+  {
+    triggers: ['union', 'U'],
+    replace: '∪',
+  },
+  {
+    triggers: ['intersection', 'inter', 'UI', '!U'],
+    replace: '∩',
+  },
+
 ];
 
 std.manifestYamlDoc(
