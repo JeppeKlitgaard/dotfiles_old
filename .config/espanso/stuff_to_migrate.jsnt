@@ -17,10 +17,6 @@ local matches = [
     replace: 'є',
   },
   {
-    trigger: ',!2',
-    replace: '‖',
-  },
-  {
     trigger: ',<1',
     replace: '‹',
   },
@@ -33,16 +29,8 @@ local matches = [
     replace: '∂',
   },
   {
-    trigger: ',DE',
-    replace: '∆',
-  },
-  {
     trigger: ',NB',
     replace: '∇',
-  },
-  {
-    trigger: ',PP',
-    replace: '∥',
   },
   {
     trigger: ',(U',
@@ -51,18 +39,6 @@ local matches = [
   {
     trigger: ',)U',
     replace: '∪',
-  },
-  {
-    trigger: ',In',
-    replace: '∫',
-  },
-  {
-    trigger: ',DI',
-    replace: '∬',
-  },
-  {
-    trigger: ',Io',
-    replace: '∮',
   },
   {
     trigger: ',<*',
@@ -97,43 +73,7 @@ local matches = [
     replace: '⊇',
   },
   {
-    trigger: ',0.',
-    replace: '⊙',
-  },
-  {
-    trigger: ',02',
-    replace: '⊚',
-  },
-  {
-    trigger: ',.P',
-    replace: '⋅',
-  },
-  {
-    trigger: ',:3',
-    replace: '⋮',
-  },
-  {
-    trigger: ',Eh',
-    replace: '⌂',
-  },
-  {
-    trigger: ',(A',
-    replace: '⌒',
-  },
-  {
     trigger: ',vv',
     replace: '│',
-  },
-  {
-    trigger: ',3-',
-    replace: '┄',
-  },
-  {
-    trigger: ',3_',
-    replace: '┅',
-  },
-  {
-    trigger: ',3!',
-    replace: '┆',
   },
 ],

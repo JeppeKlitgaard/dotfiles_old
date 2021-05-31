@@ -31,6 +31,12 @@ local rawMatches = [
     triggers: ['grad','^g'],
     replace: 'ᵍ',
   },
+
+  ### Signals
+  {
+    triggers: ['sine','ac'],
+    replace: '∿',
+  },
 ];
 
 std.manifestYamlDoc(

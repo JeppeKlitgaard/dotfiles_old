@@ -39,6 +39,15 @@ local rawMatches = [
     ],
     replace: '…',
   },
+  {
+    triggers: [
+      'vellipsis',
+      'vellip',
+      'v...',
+      'v3.',
+    ],
+    replace: '⋮',
+  },
 
   ### Partitioners
   # Paragraphs

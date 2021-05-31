@@ -11,6 +11,20 @@ local rawMatches = [
     replace: '∓',
   },
 
+  {
+    triggers: ['propto', 'pt', 'o<'],
+    replace: '∝',
+  },
+
+  {
+    triggers: ['divides', 'divs', '|'],
+    replace: '∣',
+  },
+  {
+    triggers: ['!divides', '!divs', '!|'],
+    replace: '∤',
+  },
+
   #
   {
     triggers: ['cdot', '.'],
@@ -137,6 +151,63 @@ local rawMatches = [
     replace: '≠',
   },
 
+  {
+    triggers: ['equiv','eq', '3-'],
+    replace: '≡',
+  },
+  {
+    triggers: ['!equiv','!eq', '!3-'],
+    replace: '≢',
+  },
+
+  {
+    triggers: ['4-'],
+    replace: '≣',
+  },
+
+  # Equalities
+  {
+    triggers: [':='],
+    replace: '≔',
+  },
+  {
+    triggers: ['=:'],
+    replace: '≕',
+  },
+  {
+    triggers: ['=o'],
+    replace: '≗',
+  },
+  {
+    triggers: ['=^'],
+    replace: '≙',
+  },
+  {
+    triggers: ['=v'],
+    replace: '≚',
+  },
+  {
+    triggers: ['=*'],
+    replace: '≛',
+  },
+  {
+    triggers: ['=D'],
+    replace: '≜',
+  },
+  {
+    triggers: ['=def'],
+    replace: '≝',
+  },
+  {
+    triggers: ['=m'],
+    replace: '≞',
+  },
+  {
+    triggers: ['=?'],
+    replace: '≟',
+  },
+
+
   # Approx
   {
     triggers: ['approx','a','~~'],
@@ -170,6 +241,7 @@ local rawMatches = [
     replace: '∞',
   },
 
+  ### Angles
   {
     triggers: ['angle','<'],
     replace: '∠',
@@ -187,14 +259,96 @@ local rawMatches = [
     replace: '∢',
   },
 
-  ### Shapes
+  {
+    triggers: ['perpendicular', 'perp', '_|_'],
+    replace: '⟂',
+  },
+  {
+    triggers: ['parallel', 'para', '||'],
+    replace: '∥',
+  },
+  {
+    triggers: ['Parallel', 'Para', '||^'],
+    replace: '‖',
+  },
+  {
+    triggers: ['!parallel', '!para', '|/|'],
+    replace: '∦',
+  },
+
+  ### Plane indicators and circle operators
+  {
+    triggers: ['into', 'ox'],
+    replace: '⊗',
+  },
+  {
+    triggers: ['outof', 'o.'],
+    replace: '⊙',
+  },
+
+  {
+    triggers: ['oo'],
+    replace: '⊚',
+  },
+  {
+    triggers: ['o+'],
+    replace: '⊕',
+  },
+  {
+    triggers: ['o--'],
+    replace: '⊖',
+  },
+  {
+    triggers: ['o/'],
+    replace: '⊘',
+  },
+  {
+    triggers: ['o*'],
+    replace: '⊛',
+  },
+  {
+    triggers: ['o='],
+    replace: '⊜',
+  },
+  {
+    triggers: ['o-'],
+    replace: '⊝',
+  },
+
+  ### Square operators
+  {
+    triggers: ['sq', 'square', '|=|'],
+    replace: '◻',
+  },
+  {
+    triggers: ['|+|'],
+    replace: '⊞',
+  },
+  {
+    triggers: ['|-|'],
+    replace: '⊟',
+  },
+  {
+    triggers: ['|x|', '|X|'],
+    replace: '⊠',
+  },
+  {
+    triggers: ['|.|'],
+    replace: '⊡',
+  },
+
+  ### Other Shapes
   {
     triggers: ['tangle', 'triangle'],
     replace: '⊿',
   },
   {
-    triggers: ['sq', 'square'],
-    replace: '◻',
+    triggers: ['house'],
+    replace: '⌂',
+  },
+  {
+    triggers: ['arc', 'arch'],
+    replace: '⌒',
   },
 
 
@@ -249,6 +403,55 @@ local rawMatches = [
   {
     triggers: ['proportion','prop',': '],
     replace: '∷',
+  },
+
+  ### Integrals
+  {
+    triggers: ['int'],
+    replace: '∫',
+  },
+  {
+    triggers: ['iint'],
+    replace: '∬',
+  },
+  {
+    triggers: ['iiint'],
+    replace: '∭',
+  },
+  {
+    triggers: ['iiint'],
+    replace: '⨌',
+  },
+
+  {
+    triggers: ['oint'],
+    replace: '∮',
+  },
+  {
+    triggers: ['oiint'],
+    replace: '∯',
+  },
+  {
+    triggers: ['oiiint'],
+    replace: '∰',
+  },
+
+  {
+    triggers: ['rint'],
+    replace: '∱',
+  },
+  {
+    triggers: ['lint'],
+    replace: '⨑',
+  },
+
+  {
+    triggers: ['roint'],
+    replace: '∲',
+  },
+  {
+    triggers: ['loint'],
+    replace: '∳',
   },
 
   ### Set and Group
