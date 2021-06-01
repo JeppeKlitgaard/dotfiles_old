@@ -66,7 +66,7 @@ local rawMatches = [
 
   #
   {
-    triggers: ['prod', 'PI',],
+    triggers: ['prod'],
     replace: '∏',
   },
   {
@@ -94,21 +94,21 @@ local rawMatches = [
     replace: '∂',
   },
   {
-    triggers: ['nabla', 'del', 'grad'],
+    triggers: ['nabla', 'del', 'gra'],
     replace: '∇',
   },
   {
-    triggers: ['Nabla', 'Del'],
+    triggers: ['Nabla', 'Del', 'Gra'],
     replace: '𝛁',
   },
 
   {
     triggers: ['divergence', 'div'],
-    replace: '∇ ⋅',
+    replace: '𝛁 ⋅',
   },
   {
     triggers: ['curl'],
-    replace: '∇² ×',
+    replace: '𝛁 ×',
   },
   {
     triggers: ['laplacian', 'lapl'],
