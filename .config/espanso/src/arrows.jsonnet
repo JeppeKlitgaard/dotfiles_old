@@ -157,7 +157,7 @@ local rawMatches = [
   # Long single arrows
   {
     triggers: [
-      'Lla',
+      'la-',
       'longleftarrow',
       '<---'
     ],
@@ -165,7 +165,7 @@ local rawMatches = [
   },
   {
     triggers: [
-      'Lra',
+      'ra-',
       'longrightarrow',
       '--->'
     ],
@@ -173,7 +173,7 @@ local rawMatches = [
   },
   {
     triggers: [
-      'Llra',
+      'lra-',
       'longleftrightarrow',
       '<--->'
     ],
@@ -183,7 +183,7 @@ local rawMatches = [
   # Long double arrows
   {
     triggers: [
-      'LLa',
+      'La-',
       'longLeftarrow',
       '<==='
     ],
@@ -191,7 +191,7 @@ local rawMatches = [
   },
   {
     triggers: [
-      'LRa',
+      'Ra-',
       'longRightarrow',
       '===>'
     ],
@@ -199,7 +199,7 @@ local rawMatches = [
   },
   {
     triggers: [
-      'LLra',
+      'Lra-',
       'longLeftrightarrow',
       '<===>',
       'iff'

@@ -48,6 +48,12 @@ local rawMatches = [
     replace: 'ℒ',
   },
 
+  # Fancy F
+  {
+    triggers: ['fourier', 'Fourier', 'ft', 'FT'],
+    replace: 'ℱ'
+  },
+
   # Fancy plus
   {
     trigger: '+',

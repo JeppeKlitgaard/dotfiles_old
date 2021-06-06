@@ -1,3 +1,6 @@
+# Fix for Visual Studio Code
+# Tested on Windows 10
+
 std.manifestYamlDoc(
     {
         name: "vscode",
