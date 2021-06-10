@@ -3,6 +3,7 @@
 	name = Jeppe Klitgaard
 [core]
 	editor = code --wait
+	quotePath = false
 [diff]
     tool = default-difftool
 [difftool "default-difftool"]
