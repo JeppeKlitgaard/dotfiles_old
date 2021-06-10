@@ -405,7 +405,7 @@ local rawMatches = [
     replace: '⊖',
   },
   {
-    triggers: ['o/'],
+    triggers: ['o\\'],
     replace: '⊘',
   },
   {
@@ -518,7 +518,7 @@ local rawMatches = [
     replace: '∶',
   },
   {
-    triggers: ['proportion', 'prop', ': '],
+    triggers: ['proportion', 'prop', '::'],
     replace: '∷',
   },
 
@@ -579,7 +579,7 @@ local rawMatches = [
 
   ### Set and Group
   {
-    triggers: ['emptyset', 'empty', 'O/'],
+    triggers: ['emptyset', 'empty', 'O\\'],
     replace: '∅',
   },
 

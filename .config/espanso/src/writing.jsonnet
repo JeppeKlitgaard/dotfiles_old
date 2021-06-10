@@ -45,8 +45,21 @@ local rawMatches = [
       'vellip',
       'v...',
       'v3.',
+      '...|',
     ],
     replace: '⋮',
+  },
+  {
+    triggers: [
+      '.../',
+    ],
+    replace: '⋰',
+  },
+  {
+    triggers: [
+      '...\\',
+    ],
+    replace: '⋱',
   },
 
   ### Partitioners

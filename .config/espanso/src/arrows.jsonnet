@@ -57,6 +57,7 @@ local rawMatches = [
     triggers: [
       'ua',
       'uparrow',
+      '--^',
     ],
     replace: '↑',
   },
@@ -65,6 +66,7 @@ local rawMatches = [
     triggers: [
       'da',
       'downarrow',
+      '--v',
     ],
     replace: '↓',
   },
@@ -73,6 +75,7 @@ local rawMatches = [
     triggers: [
       'uda',
       'updownarrow',
+      'v--^',
     ],
     replace: '↕',
   },
@@ -134,6 +137,7 @@ local rawMatches = [
     triggers: [
       'Ua',
       'Uparrow',
+      '==^',
     ],
     replace: '⇑',
   },
@@ -142,6 +146,7 @@ local rawMatches = [
     triggers: [
       'Da',
       'Downarrow',
+      '==v',
     ],
     replace: '⇓',
   },
@@ -150,6 +155,7 @@ local rawMatches = [
     triggers: [
       'Uda',
       'Updownarrow',
+      'v==^',
     ],
     replace: '⇕',
   },
@@ -296,6 +302,80 @@ local rawMatches = [
       'downupharpoon',
     ],
     replace: '⥯',
+  },
+
+  # Squiggle arrows
+  {
+    triggers: [
+      'rightsquigglearrow',
+      '~~>',
+    ],
+    replace: '⇝',
+  },
+  {
+    triggers: [
+      'leftsquigglearrow',
+      '<~~',
+    ],
+    replace: '⇜',
+  },
+  {
+    triggers: [
+      'longrightsquigglearrow',
+      '~~~>',
+    ],
+    replace: '⟿',
+  },
+  {
+    triggers: [
+      'longleftsquigglearrow',
+      '<~~~',
+    ],
+    replace: '⬳',
+  },
+
+  # Bar arrows
+  {
+    triggers: [
+      'barrightarrow',
+      '|-->',
+    ],
+    replace: '↦',
+  },
+  {
+    triggers: [
+      'barleftarrow',
+      '<--|',
+    ],
+    replace: '↤',
+  },
+  {
+    triggers: [
+      'baruparrow',
+      '|--^',
+    ],
+    replace: '↥',
+  },
+  {
+    triggers: [
+      'bardownarrow',
+      '|--v',
+    ],
+    replace: '↧',
+  },
+  {
+    triggers: [
+      'longbarrightarrow',
+      '|--->',
+    ],
+    replace: '⟼',
+  },
+  {
+    triggers: [
+      'longbarleftarrow',
+      '<---|',
+    ],
+    replace: '⟻',
   },
 ];
 

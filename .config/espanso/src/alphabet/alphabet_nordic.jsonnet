@@ -7,7 +7,7 @@ local rawMatches = [
     replace: 'æ',
   },
   {
-    trigger: 'oe',
+    trigger: 'o/',
     replace: 'ø',
   },
   {
