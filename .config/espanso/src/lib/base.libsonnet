@@ -13,6 +13,8 @@ local addPrePost(trigger, pre, post) =
 
     PRE_DIACRITIC: ',',
     PRE_BBB: self.PRE + 'bb',
+    PRE_FRAKTUR: self.PRE + 'fk',
+    PRE_FRAKTUR_BOLD: self.PRE_FRAKTUR + 'b',
 
     LATIN_ALPHABET_LENGTH: 26,
     DECIMAL_ALPHABET_LENGTH: 10,
