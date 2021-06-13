@@ -1,12 +1,6 @@
-local g = import '../lib/base.libsonnet';
+local g = import '../../lib/base.libsonnet';
 
 local rawMatches = [
-  ### Predefined sets
-  {
-    triggers: ['emptyset', 'empty', 'O\\'],
-    replace: '∅',
-  },
-
   ### Membership
   {
     triggers: ['in'],
