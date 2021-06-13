@@ -1,7 +1,10 @@
 local g = import 'lib/base.libsonnet';
 
 local dateFmt = '%F';  # ISO 8601 Date
-local datetimeFmt = '%Y-%m-%dT%H:%M:%S%#z';  # ISO 8601 Date
+# 2021-06-13
+
+local datetimeFmt = '%Y-%m-%dT%H:%M:%S%:z';  # ISO 8601 Date
+# 2021-06-13T16:55:38+01:00
 
 local rawMatches = [
   {
