@@ -10,6 +10,12 @@ local rawMatches = [
     triggers: ['Im', 'im'],
     replace: 'ℑ',
   },
+
+  # Complex i symbol
+  {
+    triggers: ['ci'],
+    replace: '𝑖',
+  },
 ];
 
 std.manifestYamlDoc(
