@@ -5,6 +5,8 @@ local addPrePost(trigger, pre, post) =
 ;
 
 {
+    SRC_KEY: 'src',
+
     PARENT: 'default',
     PRE: ':',
     POST: ' ',

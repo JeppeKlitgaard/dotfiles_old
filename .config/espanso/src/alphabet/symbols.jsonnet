@@ -26,12 +26,6 @@ local rawMatches = [
     replace: '©',
   },
 
-  # Hbar
-  {
-    trigger: 'hbar',
-    replace: 'ℏ',
-  },
-
   # Fancy plus
   {
     trigger: '+',
