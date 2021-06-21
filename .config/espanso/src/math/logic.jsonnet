@@ -22,11 +22,11 @@ local rawMatches = [
 
   ### Negation
   {
-    triggers: ['neg', '!'],
+    triggers: ['neg'],
     replace: '¬',
   },
   {
-    triggers: ['Neg', '!!'],
+    triggers: ['Neg'],
     replace: '￢',
   },
 
@@ -46,6 +46,66 @@ local rawMatches = [
   {
     triggers: ['False', 'F'],
     replace: '┻',
+  },
+
+  ### Turnstiles
+  # Single
+  {
+    triggers: ['|-'],
+    replace: '⊢',
+  },
+  {
+    triggers: ['!|-'],
+    replace: '⊬',
+  },
+
+  {
+    triggers: ['-|'],
+    replace: '⊣',
+  },
+
+  # Double
+  {
+    triggers: ['|='],
+    replace: '⊨',
+  },
+  {
+    triggers: ['!|='],
+    replace: '⊭',
+  },
+
+  # Other
+  {
+    triggers: ['||-'],
+    replace: '⊩',
+  },
+  {
+    triggers: ['!||-'],
+    replace: '⊮',
+  },
+
+  {
+    triggers: ['||='],
+    replace: '⊫',
+  },
+  {
+    triggers: ['!||='],
+    replace: '⊯',
+  },
+
+  {
+    triggers: ['|||-'],
+    replace: '⊪',
+  },
+
+  # Both sides
+  {
+    triggers: ['-||-'],
+    replace: '⟛',
+  },
+  {
+    triggers: ['=||='],
+    replace: '⟚',
   },
 ];
 

@@ -14,7 +14,7 @@ local rawMatches = [
     replace: '∭',
   },
   {
-    triggers: ['iiint'],
+    triggers: ['iiiint'],
     replace: '⨌',
   },
 

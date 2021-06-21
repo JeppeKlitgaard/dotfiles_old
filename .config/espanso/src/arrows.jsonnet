@@ -76,6 +76,7 @@ local rawMatches = [
       'uda',
       'updownarrow',
       'v--^',
+      '^--v',
     ],
     replace: '↕',
   },
@@ -319,6 +320,7 @@ local rawMatches = [
     ],
     replace: '⇜',
   },
+
   {
     triggers: [
       'longrightsquigglearrow',
@@ -334,7 +336,15 @@ local rawMatches = [
     replace: '⬳',
   },
 
-  # Bar arrows
+  {
+    triggers: [
+      'leftrightsquigglearrow',
+      '<~~>',
+    ],
+    replace: '↭',
+  },
+
+  # Bar single arrows
   {
     triggers: [
       'barrightarrow',
@@ -376,6 +386,22 @@ local rawMatches = [
       '<---|',
     ],
     replace: '⟻',
+  },
+
+  # Bar double arrow
+  {
+    triggers: [
+      'barRightarrow',
+      '|==>',
+    ],
+    replace: '⤇',
+  },
+  {
+    triggers: [
+      'barLeftarrow',
+      '<==|',
+    ],
+    replace: '⤆',
   },
 ];
 
