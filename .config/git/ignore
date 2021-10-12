@@ -1,11 +1,29 @@
+# Global git ignore
+
 # Python
 .venv/
 venv/
 __pycache__/
 *.py[cod]
 
+# Mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Jupyter
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
 # JavaScript
 node_modules/
 
 # VSCode
 .vscode/
+
+# Logging
+*.log
+
+# Sqlite
+*.sqlite3
+*.sqlite3-journal
