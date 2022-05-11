@@ -27,3 +27,9 @@ node_modules/
 # Sqlite
 *.sqlite3
 *.sqlite3-journal
+
+# Rust
+debug/
+target/
+**/*.rs.bk
+*.pdb
